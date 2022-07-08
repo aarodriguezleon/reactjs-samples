@@ -5,7 +5,7 @@ import Result from "./components/Result";
 const App = () =>{
     console.log('ejecuto la app')
 
-    const onclickHandlerFunction = (text) => {
+    const onclickHandlerFunction = text => {
         console.log('Button.onclickHandler',text)
     }
     
