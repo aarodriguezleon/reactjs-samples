@@ -1,8 +1,8 @@
 import React from 'react'
-//const Result = ({value}) =>{
-const Result = (props) =>{
-    console.log('ejeción result', props)
-    const {value} = props
+
+const Result = ({value}) =>{
+    debugger
+    console.log('ejecución result', value)
     return (
         <div className="result">
             <span>{value}</span>
