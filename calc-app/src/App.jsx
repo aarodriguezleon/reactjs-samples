@@ -6,7 +6,7 @@ const App = () =>{
     console.log('ejecuto la app')
     
     return <div className='react-calculator'>
-        <Result value={10}/>
+        <Result value={"10"}/>
         <div className="numbers">
             <button>1</button>
             <button>2</button>
