@@ -8,7 +8,9 @@ const App = () =>{
     return <div className='react-calculator'>
         <Result value={"10"}/>
         <div className="numbers">
-            <Button type='numero' text='1'/>
+            <Button type='numero' text='1' onclickHandler={(text) => {
+                console.log('Button.onclickHandler',text)
+            }}/>
             <button>2</button>
             <button>3</button>
             <button>4</button>
