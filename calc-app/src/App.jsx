@@ -4,13 +4,15 @@ import Button from './components/Button'
 import Result from "./components/Result";
 const App = () =>{
     console.log('ejecuto la app')
+
+    const onclickHandlerFunction = (text) => {
+        console.log('Button.onclickHandler',text)
+    }
     
     return <div className='react-calculator'>
         <Result value={"10"}/>
         <div className="numbers">
-            <Button type='numero' text='1' onclickHandler={(text) => {
-                console.log('Button.onclickHandler',text)
-            }}/>
+            <Button type='numero' text='1' onclickHandler={onclickHandlerFunction}/>
             <button>2</button>
             <button>3</button>
             <button>4</button>
