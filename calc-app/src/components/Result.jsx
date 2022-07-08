@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Result = ({value}) =>{
-    debugger
+    //debugger
     console.log('ejecución result', value)
     return (
         <div className="result">
