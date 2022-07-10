@@ -1,18 +1,23 @@
-import React from "react";
-import './App.css'
+import React from 'react'
 import Button from './components/Button'
-import Result from "./components/Result";
-const App = () =>{
-    console.log('ejecuto la app')
+import MathOperations from './components/MathOperations'
+import Result from './components/Result'
+import './App.css'
 
-    const onclickHandlerFunction = text => {
-        console.log('Button.onclickHandler',text)
+// Función Flecha o Arrow Function
+const App = () => {
+
+    const clickHandlerFunction = text => {
+        console.log("Button.clickHandler1", text)
     }
-    
-    return <div className='react-calculator'>
-        <Result value={"10"}/>
+
+    // Lo que ejecuta la función
+    console.log("Renderización de App")
+    return (
+    <main className='react-calculator'>
+        <Result value={undefined} />
         <div className="numbers">
-            <Button type='numero' text='1' onclickHandler={onclickHandlerFunction}/>
+            <Button text="1" clickHandler={clickHandlerFunction} /> 
             <button>2</button>
             <button>3</button>
             <button>4</button>
@@ -24,16 +29,22 @@ const App = () =>{
             <button>0</button>
         </div>
         <div className="functions">
-            <button>clear</button>
-            <button>R</button>
+            <button>
+                clear
+            </button>
+            <button>
+                r
+            </button>
         </div>
-        <div className="mathoperation">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-        </div>
-    </div>
+        <MathOperations 
+            onClickOperation={operation => 
+                console.log("Operation:", operation)
+            } 
+            onClickEqual={equal => 
+                console.log("Equal:", equal)
+            }
+        />
+    </main>)
 }
 
 export default App
