@@ -2,6 +2,7 @@ import React from 'react'
 import Button from './components/Button'
 import MathOperations from './components/MathOperations'
 import Result from './components/Result'
+import Functions from './components/Functions'
 import './App.css'
 
 // Función Flecha o Arrow Function
@@ -15,27 +16,24 @@ const App = () => {
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
-        <Result value={undefined} />
+        <Result value={"10"} />
         <div className="numbers">
             <Button text="1" clickHandler={clickHandlerFunction} /> 
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>0</button>
+            <Button text="2" clickHandler={clickHandlerFunction} />
+            <Button text="3" clickHandler={clickHandlerFunction} />
+            <Button text="4" clickHandler={clickHandlerFunction} />
+            <Button text="5" clickHandler={clickHandlerFunction} />
+            <Button text="6" clickHandler={clickHandlerFunction} />
+            <Button text="7" clickHandler={clickHandlerFunction} />
+            <Button text="8" clickHandler={clickHandlerFunction} />
+            <Button text="9" clickHandler={clickHandlerFunction} />
+            <Button text="0" clickHandler={clickHandlerFunction} />
         </div>
-        <div className="functions">
-            <button>
-                clear
-            </button>
-            <button>
-                r
-            </button>
-        </div>
+        <Functions 
+            onContentClear={() => console.log("Clear")} 
+            onDelete={() => console.log("Delete")}
+        />
+        
         <MathOperations 
             onClickOperation={operation => 
                 console.log("Operation:", operation)
