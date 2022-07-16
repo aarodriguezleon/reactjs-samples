@@ -13,7 +13,7 @@ const App = () => {
     return (
     <main className='react-calculator'>
         <Result value={"10"} />
-        <Numbers onClickNumber={(text) => console.log("Number: ", text)}/>
+        <Numbers onClickNumber={number => console.log("Onclick Number: ", number)}/>
         <Functions 
             onContentClear={() => console.log("Clear")} 
             onDelete={() => console.log("Delete")}
