@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 import Functions from './components/Functions'
@@ -7,13 +7,20 @@ import './App.css'
 
 // Función Flecha o Arrow Function
 const App = () => {
+    const arrayValueFunction = useState("")
+    const valueElement = arrayValueFunction[0]
+    const changeValue = arrayValueFunction[1]
 
     // Lo que ejecuta la función
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
-        <Result value={"10"} />
-        <Numbers onClickNumber={number => console.log("Onclick Number: ", number)}/>
+        <Result value={valueElement} />
+        <Numbers onClickNumber={number => {
+            changeValue(number)
+            console.log("Onclick Number: ", number)
+        
+        }}/>
         <Functions 
             onContentClear={() => console.log("Clear")} 
             onDelete={() => console.log("Delete")}
