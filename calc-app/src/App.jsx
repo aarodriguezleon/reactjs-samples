@@ -7,23 +7,26 @@ import './App.css'
 
 // Función Flecha o Arrow Function
 const App = () => {
-    const arrayValueFunction = useState("")
-    const valueElement = arrayValueFunction[0]
-    const changeValue = arrayValueFunction[1]
+    const [stack, setStack] = useState("")
 
     // Lo que ejecuta la función
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
-        <Result value={valueElement} />
+        <Result value={stack} />
         <Numbers onClickNumber={number => {
-            changeValue(number)
+            setStack(stack + number)
             console.log("Onclick Number: ", number)
         
         }}/>
         <Functions 
-            onContentClear={() => console.log("Clear")} 
-            onDelete={() => console.log("Delete")}
+            onContentClear={() =>{
+                setStack("")
+                console.log("Clear")
+            }} 
+            onDelete={() => {
+                console.log("Delete")
+            }}
         />
         
         <MathOperations 
