@@ -1,7 +1,7 @@
 # Reactjs-samples
 Ejercicios y Mini Proyectos con React JS
 # Steap one
-npx create-react-app weather-app
+npx create-react-app <App-Name>
 # Steap two
 Delete all src files and README.md file 
 # Steap three
